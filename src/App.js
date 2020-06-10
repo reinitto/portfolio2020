@@ -13,7 +13,7 @@ const routes = [
   { path: "/contact", name: "Contact", Component: Contact },
 ];
 
-function NavArrow({ routes, history, type, leftOffset }) {
+function NavArrow({ routes, history, type, leftOffset, setDirection }) {
   let getRoute = ({ type }) => {
     // find current route's index
     let currentRoute = window.location.pathname;
@@ -37,6 +37,7 @@ function NavArrow({ routes, history, type, leftOffset }) {
   };
   let onClick = (e) => {
     e.preventDefault();
+    setDirection(type);
     let path = getRoute({ type });
     return history.push(path);
   };
@@ -53,6 +54,7 @@ function NavArrow({ routes, history, type, leftOffset }) {
 
 export default function App() {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  const [direction, setDirection] = useState("right");
   useEffect(() => {
     const handleResize = () => setInnerWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
@@ -62,11 +64,18 @@ export default function App() {
   }, []);
   return (
     <Router history={history}>
-      <Navbar width={innerWidth} />
+      <Navbar
+        direction={direction}
+        width={innerWidth}
+        routes={routes}
+        setDirection={setDirection}
+        history={history}
+      />
       <NavArrow
         leftOffset={innerWidth}
         routes={routes}
         history={history}
+        setDirection={setDirection}
         type="left"
       />
       {routes.map(({ path, Component }, i) => (
@@ -75,11 +84,11 @@ export default function App() {
             <CSSTransition
               in={match != null}
               timeout={300}
-              classNames="page"
+              classNames={`page-${direction}`}
               unmountOnExit
             >
               <Fragment>
-                <div className="page">
+                <div className={`page page-${direction}`}>
                   <div className="page-container">
                     <div className="content">
                       <Component />
@@ -96,6 +105,7 @@ export default function App() {
         leftOffset={innerWidth}
         routes={routes}
         history={history}
+        setDirection={setDirection}
         type="right"
       />
     </Router>

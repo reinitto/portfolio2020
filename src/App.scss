@@ -15,6 +15,7 @@ body {
 }
 h2 {
   text-align: center;
+  color: $primary-dark;
 }
 
 ::-webkit-scrollbar {
@@ -35,7 +36,7 @@ h2 {
   padding: 120px 1rem;
   position: fixed;
   z-index: 2;
-  top: 50%;
+  top: 50vh;
   transform: translate(0%, -50%);
   background-color: transparentize($page-background-dark, 0.5);
   text-decoration: none;
@@ -64,23 +65,52 @@ h2 {
   }
 }
 
-.page-enter {
-  opacity: 0;
-  transform: translateX(100%);
+.page {
+  position: absolute;
+  top: 92px;
+  left: 0;
+  height: 100%;
 }
 
-.page-enter-active {
+.page-left-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.page-left-enter-active {
   opacity: 1;
   transform: translateX(0);
   transition: opacity 300ms, transform 300ms;
 }
 
-.page-exit {
+.page-left-exit {
   opacity: 1;
   transform: translateX(0);
 }
 
-.page-exit-active {
+.page-left-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 300ms, transform 300ms;
+}
+.page-right-enter {
+  opacity: 0;
+  transform: translateX(100%);
+  transition-delay: 300ms;
+}
+
+.page-right-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-right-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.page-right-exit-active {
   opacity: 0;
   transform: translateX(-100%);
   transition: opacity 300ms, transform 300ms;
@@ -184,9 +214,9 @@ h2 {
 
 .content {
   height: 100%;
-  max-width: 80%;
+  width: 100vw;
   margin: auto;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 hr {
   background: $primary-dark;
@@ -241,6 +271,7 @@ hr {
   align-items: center;
   border-bottom: 1px solid $primary-dark;
   color: $page-background;
+  cursor: pointer;
   &:hover {
     transition: all 0.2s;
     background: $primary-dark;
@@ -253,13 +284,114 @@ hr {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .arrow {
-    display: none;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .form-input {
+    display: flex;
+    align-items: flex-start;
+    width: 60%;
+    margin: 1rem;
+    label {
+      font-size: 16px;
+      font-weight: bold;
+      padding: 0.25rem;
+      width: 100px;
+      color: $primary-dark;
+    }
+    input,
+    textarea {
+      border: 1px solid $primary-dark;
+      background: transparent;
+    }
+    textarea {
+      height: 300px;
+    }
   }
-  .content {
-    height: 100%;
-    max-width: 100%;
-    overflow: hidden;
+  .form-control {
+    padding: 1rem;
+    width: 100%;
+    font-size: 18px;
+  }
+  button {
+    text-decoration: none;
+    text-transform: uppercase;
+    background: $primary;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    transition: background 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $primary-dark;
+    color: $page-background;
+    cursor: pointer;
+    &:hover {
+      transition: all 0.2s;
+      background: $primary-dark;
+      color: $page-background;
+    }
+    & {
+      transition: all 0.2s;
+      background: $primary-dark;
+      color: $page-background;
+    }
   }
 }
+.about-page {
+  background: transparent;
+  padding: 1rem;
+  width: 80%;
+  margin: auto;
+  .hero {
+    // height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .hero-content {
+      position: relative;
+      top: 15%;
+      h1 {
+        text-align: center;
+        color: $primary-dark;
+      }
+      .keywords {
+        display: none;
+      }
+    }
+  }
+  .about {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    & > div {
+      display: inline;
+      // transform: skew(-5deg, -5deg);
+      & button {
+        border: 1px solid $primary-dark;
+        // transform: skew(5deg, 5deg);
+      }
+    }
+  }
+  .text-display {
+    padding: 3rem;
+    font-size: 22px;
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form-input {
+    width: 80%;
+    flex-direction: column;
+  }
+  .about-page {
+    width: unset;
+  }
+  .text-display {
+    width: unset;
+  }
+}
+
+// @media screen and (max-width: 768px) {}
