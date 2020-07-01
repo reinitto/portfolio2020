@@ -25,11 +25,12 @@ h2 {
 
 .page {
   position: absolute;
+  top: 100px;
 }
+
 .page-container {
   display: flex;
-  height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .arrow {
@@ -63,13 +64,6 @@ h2 {
     font-size: 50px;
     content: ">";
   }
-}
-
-.page {
-  position: absolute;
-  top: 92px;
-  left: 0;
-  height: 100%;
 }
 
 .page-left-enter {
@@ -216,7 +210,7 @@ h2 {
   height: 100%;
   width: 100vw;
   margin: auto;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 hr {
   background: $primary-dark;
@@ -364,6 +358,8 @@ hr {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    position: sticky;
+    top: 92px;
     & > div {
       display: inline;
       // transform: skew(-5deg, -5deg);

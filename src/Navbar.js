@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Navbar({ history, setDirection, routes }) {
   const location = useLocation();
@@ -47,7 +47,14 @@ function Navbar({ history, setDirection, routes }) {
     }
   });
   return (
-    <Fragment>
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        width: "100vw",
+        zIndex: 100,
+      }}
+    >
       <div className="navbar">
         <div className="logo-container">
           <div className="logo">
@@ -57,7 +64,7 @@ function Navbar({ history, setDirection, routes }) {
         </div>
       </div>
       <div className="nav-item-container">{links}</div>
-    </Fragment>
+    </div>
   );
 }
 

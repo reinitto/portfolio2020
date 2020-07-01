@@ -58,6 +58,14 @@ export default function App() {
   useEffect(() => {
     const handleResize = () => setInnerWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
+    document.onkeyup = function (event) {
+      if (event.which === 37 || event.keyCode === 37) {
+        document.querySelector(".leftArrow").click();
+      }
+      if (event.which === 39 || event.keyCode === 39) {
+        document.querySelector(".rightArrow").click();
+      }
+    };
     return () => {
       window.removeEventListener("resize", handleResize);
     };
