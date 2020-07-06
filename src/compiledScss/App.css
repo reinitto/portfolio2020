@@ -152,7 +152,7 @@ button {
 }
 
 .project {
-  background-color: lightgray;
+  background-color: #aeb5e5;
   -webkit-box-shadow: 4px 4px 1px #c3d7ff;
           box-shadow: 4px 4px 1px #c3d7ff;
   -ms-flex-item-align: baseline;
@@ -251,6 +251,7 @@ button {
 
 .hidden {
   height: 0;
+  visibility: hidden;
   overflow: hidden;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
@@ -259,6 +260,7 @@ button {
 }
 
 .show {
+  height: auto;
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
   -webkit-transition: all 0.26s ease;

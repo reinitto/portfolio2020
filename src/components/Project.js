@@ -1,31 +1,19 @@
-import React, { useState } from "react";
-function get_tex_size(txt, font) {
-  let element = document.createElement("canvas");
-  let context = element.getContext("2d");
-  context.font = font;
-  var tsize = {
-    width: context.measureText(txt).width,
-    height: parseInt(context.font),
-  };
-  return tsize;
-}
+import React, { useState, useEffect } from "react";
+
 export let Project = ({ project }) => {
+  let [data, setData] = useState(project);
   let [hidden, setHidden] = useState(true);
-  let { name, about, technologies, screenshot, link, github, glitch } = project;
-  var aboutSize = get_tex_size(about, "16px Times New Roman");
-  var techSize = get_tex_size(technologies.join(" "), "30px Times New Roman");
-  let aboutheight = Math.ceil(aboutSize.width / 250) * 22 + 32;
-  let techHeight = Math.ceil(techSize.width / 250) * 32;
+  useEffect(() => {
+    setData({
+      ...project,
+      screenshot: process.env.PUBLIC_URL + project.screenshot,
+    });
+  }, [project]);
+  let { name, about, technologies, screenshot, link, github, glitch } = data;
   return (
     <div className="project" key={name}>
       <h4>{name}</h4>
-      <img
-        src={process.env.PUBLIC_URL + screenshot}
-        alt=""
-        width={250}
-        height={187.5}
-        loading="lazy"
-      />
+      <img src={screenshot} alt="" width={250} height={187.5} loading="lazy" />
       <div className="links">
         <a
           className="project-links"
@@ -52,12 +40,7 @@ export let Project = ({ project }) => {
           {github ? "Github" : "Glitch"}
         </a>
       </div>
-      <div
-        className={hidden ? "hidden" : "show"}
-        style={{
-          height: !hidden ? `${aboutheight + techHeight + 40}px` : 0,
-        }}
-      >
+      <div className={hidden ? "hidden" : "show"}>
         <h6>About</h6>
         <p>{about}</p>
         <h6>Main technologies</h6>

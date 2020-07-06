@@ -120,7 +120,7 @@ button {
   justify-content: center;
 }
 .project {
-  background-color: lightgray;
+  background-color: #aeb5e5;
   box-shadow: 4px 4px 1px darken($page-background, 10%);
   align-self: baseline;
   border: 2px solid $primary-dark;
@@ -199,11 +199,13 @@ button {
 
 .hidden {
   height: 0;
+  visibility: hidden;
   overflow: hidden;
   transform: scaleY(0);
   transition: all 0.26s ease;
 }
 .show {
+  height: auto;
   transform: scaleY(1);
   transition: all 0.26s ease;
   padding: 1rem 1rem 0;
