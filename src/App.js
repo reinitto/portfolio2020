@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Router, Route, Redirect } from "react-router-dom";
-import { CSSTransition } from "react-transition-group";
 import history from "./history";
 import Navbar from "./Navbar";
 import { About } from "./pages/About";
@@ -73,6 +72,41 @@ export default function App() {
       window.removeEventListener("onkeyup", keyPress);
     };
   }, []);
+  let allRoutes = routes.map(({ path, Component }, i) => (
+    <Route key={path} path={path}>
+      <Fragment>
+        <div className={`page`}>
+          <div className="page-container">
+            <div className="content">
+              <Component />
+            </div>
+          </div>
+        </div>
+      </Fragment>
+      {/* {({ match }) => (
+        <CSSTransition
+          in={match != null}
+          timeout={300}
+          classNames={`page-${direction}`}
+          unmountOnExit
+        >
+          <Fragment>
+            <div className={`page page-${direction}`}>
+              <div className="page-container">
+                <div className="content">
+                  <Component />
+                </div>
+              </div>
+            </div>
+          </Fragment>
+        </CSSTransition>
+      )} */}
+    </Route>
+  ));
+  allRoutes = [
+    ...allRoutes,
+    <Redirect key={"somekey"} exact from="/" to="about" />,
+  ];
   return (
     <Router history={history}>
       <Navbar
@@ -89,29 +123,6 @@ export default function App() {
         setDirection={setDirection}
         type="left"
       />
-      {routes.map(({ path, Component }, i) => (
-        <Route key={path} path={path}>
-          {({ match }) => (
-            <CSSTransition
-              in={match != null}
-              timeout={300}
-              classNames={`page-${direction}`}
-              unmountOnExit
-            >
-              <Fragment>
-                <div className={`page page-${direction}`}>
-                  <div className="page-container">
-                    <div className="content">
-                      <Component />
-                    </div>
-                  </div>
-                </div>
-              </Fragment>
-            </CSSTransition>
-          )}
-        </Route>
-      ))}
-      {<Redirect exact from="/" to="about" />}
       <NavArrow
         leftOffset={innerWidth}
         routes={routes}
@@ -119,6 +130,7 @@ export default function App() {
         setDirection={setDirection}
         type="right"
       />
+      {allRoutes}
     </Router>
   );
 }

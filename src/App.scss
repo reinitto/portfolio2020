@@ -5,6 +5,11 @@ $primary-dark: #050859;
 $page-background: #f6f9ff;
 $page-background-dark: darken($page-background, 3%);
 $light: #f6f9ff;
+#root {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 html,
 body {
   margin: 0;
@@ -64,50 +69,6 @@ h2 {
     font-size: 50px;
     content: ">";
   }
-}
-
-.page-left-enter {
-  opacity: 0;
-  transform: translateX(-100%);
-}
-
-.page-left-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
-}
-
-.page-left-exit {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.page-left-exit-active {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 300ms, transform 300ms;
-}
-.page-right-enter {
-  opacity: 0;
-  transform: translateX(100%);
-  transition-delay: 300ms;
-}
-
-.page-right-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
-}
-
-.page-right-exit {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.page-right-exit-active {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 300ms, transform 300ms;
 }
 
 button {
@@ -216,7 +177,7 @@ button {
   height: 100%;
   width: 100vw;
   margin: auto;
-  // overflow-x: hidden;
+  animation: 0.5s ease-out 0s 1 slideInFromBottom;
 }
 hr {
   background: $primary-dark;
@@ -376,11 +337,15 @@ hr {
       }
     }
   }
+  .text-container {
+    overflow: hidden;
+  }
   .text-display {
     padding: 3rem;
     font-size: 22px;
     width: 60%;
     margin: auto;
+    animation: 0.5s ease-out 0s 1 slideInFromTop;
   }
 }
 
@@ -397,4 +362,20 @@ hr {
   }
 }
 
-// @media screen and (max-width: 768px) {}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -13,14 +13,6 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <title>Reinis Rozensteins</title>
-    <script>
-      window.addEventListener("DOMContentLoaded", (event) => {
-        var root = document.querySelector("#root");
-        root.style.top = 0;
-        root.style.width = "100%";
-        root.style.height = "100%";
-      });
-    </script>
   </head>
   <style>
     html,
@@ -30,14 +22,14 @@
       margin: 0;
       padding: 0;
     }
-    #root {
+    /* #root {
       background-color: #f6f9ff;
       position: absolute;
       top: 100vh;
       left: 0;
       z-index: 1;
       transition: all 0.6s cubic-bezier(0.11, 0.74, 0.56, 0.99) 0.4s;
-    }
+    } */
     .beforeLoad {
       position: absolute;
       overflow: hidden;
@@ -50,6 +42,7 @@
       justify-content: center;
       align-items: center;
       transition: all 0.6s cubic-bezier(0.11, 0.74, 0.56, 0.99) 0.4s;
+      z-index: 100;
     }
     .lds-roller {
       display: inline-block;

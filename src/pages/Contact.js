@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as firebase from "firebase/app";
 import "firebase/database";
-import "firebase/analytics";
 import { ExternalButton } from "../components/ExternalButton";
 const firebaseConfig = {
   apiKey: "AIzaSyBRh9vSZgi8Hj3BtkRcHnWu-kw57oUy0_s",
@@ -23,7 +22,6 @@ export function Contact() {
     if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig);
     }
-    // firebase.analytics();
   });
   // Firebase configuration
   let submitMessage = async () => {

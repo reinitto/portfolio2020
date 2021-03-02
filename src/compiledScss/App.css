@@ -1,3 +1,9 @@
+#root {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
 html,
 body {
   margin: 0;
@@ -68,72 +74,6 @@ h2 {
 .rightArrow:after {
   font-size: 50px;
   content: ">";
-}
-
-.page-left-enter {
-  opacity: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-.page-left-enter-active {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
-  transition: opacity 300ms, -webkit-transform 300ms;
-  transition: opacity 300ms, transform 300ms;
-  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
-}
-
-.page-left-exit {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.page-left-exit-active {
-  opacity: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
-  transition: opacity 300ms, -webkit-transform 300ms;
-  transition: opacity 300ms, transform 300ms;
-  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
-}
-
-.page-right-enter {
-  opacity: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition-delay: 300ms;
-          transition-delay: 300ms;
-}
-
-.page-right-enter-active {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
-  transition: opacity 300ms, -webkit-transform 300ms;
-  transition: opacity 300ms, transform 300ms;
-  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
-}
-
-.page-right-exit {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.page-right-exit-active {
-  opacity: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
-  transition: opacity 300ms, -webkit-transform 300ms;
-  transition: opacity 300ms, transform 300ms;
-  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
 }
 
 button {
@@ -273,6 +213,8 @@ button {
   height: 100%;
   width: 100vw;
   margin: auto;
+  -webkit-animation: 0.5s ease-out 0s 1 slideInFromBottom;
+          animation: 0.5s ease-out 0s 1 slideInFromBottom;
 }
 
 hr {
@@ -519,11 +461,17 @@ hr {
   border: 1px solid #050859;
 }
 
+.about-page .text-container {
+  overflow: hidden;
+}
+
 .about-page .text-display {
   padding: 3rem;
   font-size: 22px;
   width: 60%;
   margin: auto;
+  -webkit-animation: 0.5s ease-out 0s 1 slideInFromTop;
+          animation: 0.5s ease-out 0s 1 slideInFromTop;
 }
 
 @media screen and (max-width: 768px) {
@@ -539,5 +487,49 @@ hr {
   }
   .text-display {
     width: unset;
+  }
+}
+
+@-webkit-keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }

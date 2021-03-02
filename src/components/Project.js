@@ -1,17 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export let Project = ({ project }) => {
   let [data, setData] = useState(project);
+  let [screenshot, setScreenshot] = useState();
   let [hidden, setHidden] = useState(true);
+  let projectRef = useRef();
   useEffect(() => {
     setData({
       ...project,
-      screenshot: process.env.PUBLIC_URL + project.screenshot,
     });
   }, [project]);
-  let { name, about, technologies, screenshot, link, github, glitch } = data;
+  useEffect(() => {
+    let options = {
+      threshold: 0.25,
+    };
+    let currRef = projectRef.current;
+    let observer = new IntersectionObserver((entries) => {
+      for (let entry of entries) {
+        if (entry.isIntersecting) {
+          setScreenshot(process.env.PUBLIC_URL + project.screenshot);
+        }
+      }
+    }, options);
+    observer.observe(currRef);
+
+    return () => {
+      observer.unobserve(currRef);
+    };
+  });
+  let { name, about, technologies, link, github, glitch } = data;
   return (
-    <div className="project" key={name}>
+    <div ref={projectRef} className="project" key={name}>
       <h4>{name}</h4>
       <img src={screenshot} alt="" width={250} height={187.5} loading="lazy" />
       <div className="links">

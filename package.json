@@ -3,24 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "firebase": "^7.15.0",
-    "google-auth-library": "^6.0.1",
+    "firebase": "^7.15.5",
     "history": "^4.10.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.1.2",
-    "react-router-hash-link": "^1.2.2",
-    "react-scripts": "3.4.1",
-    "react-transition-group": "^4.4.1",
-    "screenshotmachine": "^2.0.0"
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "react-start": "react-scripts start",
+    "build": "craco build && rm build/service-worker.js",
+    "firebase-hosting": "firebase deploy --only hosting",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -28,14 +23,18 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "defaults"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.10.4",
+    "@craco/craco": "^5.6.4",
+    "html-webpack-plugin": "^4.3.0",
+    "workbox-webpack-plugin": "^5.1.3"
   }
 }

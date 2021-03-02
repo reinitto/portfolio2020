@@ -1,7 +1,7 @@
 {
   "project15": {
     "name": "Photographer website",
-    "screenshot": "/screenshots/screenshot_Photographerwebsite.png",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673293/portfolio/screenshot_Photographerwebsite_duckbi.png",
     "link": "https://capturepuremoments.no/",
     "github": "https://github.com/reinitto/sunshine_photography",
     "about": "A firebase app. Website project with admin functionality. Has authentication with different roles admin/user, admin panel that allows admin to add/remove content, integrated cloud firestore and realtime database, cloud functions. ",
@@ -21,9 +21,45 @@
       "responsive design"
     ]
   },
+  "project12": {
+    "name": "News Website",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673293/portfolio/screenshot_notUber_p7lw2x.png",
+    "link": "https://news-app-billion-and-one.herokuapp.com/",
+    "github": "https://github.com/reinitto/news_site",
+    "about": "News website. Displays top recent news in a selected country. Has the ability to search news by keywords.",
+    "technologies": ["javascript", "express", "node","react","heroku", "NewsAPI", "MaterialUI", "react hooks", "express.js","node.js"]
+  },
+  "project11": {
+    "name": "notUber",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673293/portfolio/screenshot_notUber_p7lw2x.png",
+    "link": "https://harsh-purple-stoat.glitch.me/",
+    "github": "https://github.com/reinitto/50_cent",
+    "about": "Uber-like frontend with integrated google maps,directions,places. Allows to look up the estimated price, time for the entered trip. Autocompletes search. Calculates a surcharge during more busy times(based on personal assumptions). Dark mode turns on after 5pm.",
+    "technologies": ["javascript", "express", "node"]
+  },
+
+  "project9": {
+    "name": "Quiz Builder",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673293/portfolio/screenshot_quizBuilder_pihrqu.jpg",
+    "link": "https://rounded-shorthaired-crystal.glitch.me/",
+    "github": "https://github.com/reinitto/quiz_builder",
+    "about": "Quiz builder App. Allows user to create quizzes and share them with friends. Implements redux state management",
+    "technologies": [
+      "React",
+      "Redux",
+      "javascript",
+      "express",
+      "node",
+      "mongoose",
+      "mongoDB",
+      "rest",
+      "api",
+      "MVC"
+    ]
+  },
   "project14": {
     "name": "Gallery builder",
-    "screenshot": "/screenshots/screenshot_Gallerybuilder.png",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673292/portfolio/screenshot_Gallerybuilder_c2dvid.jpg",
     "link": "https://reinitto-picshare.glitch.me/",
     "github": "https://github.com/reinitto/picshare",
     "about": "Node app with integrated Cloudinary, MongoDB and other apis. Has the ability to store  image albums online and share with friends.",
@@ -41,91 +77,12 @@
       "babel"
     ]
   },
-  "project13": {
-    "name": "Crypto Sim",
-    "screenshot": "/screenshots/screenshot_CryptoSim.png",
-    "link": "https://cryptosim.ew.r.appspot.com/",
-    "github": "https://github.com/reinitto/crypto_sim",
-    "about": "React/Redux simulation game involving buying and selling cryptocurrencies.",
-    "technologies": [
-      "javascript",
-      "React",
-      "node",
-      "Redux",
-      "express",
-      "mongoose",
-      "mongoDB",
-      "rest",
-      "api",
-      "google cloud",
-      "google engine app",
-      "bcryptjs",
-      "axios",
-      "jest-enzyme",
-      "cryptocurrencies",
-      "materializeCSS",
-      "reducers",
-      "actions",
-      "testing",
-      "models",
-      "MVC"
-    ]
-  },
-  "project12": {
-    "name": "Platformer level",
-    "screenshot": "/screenshots/screenshot_Platformerlevel.png",
-    "link": "https://epic-jones-453e59.netlify.app/",
-    "github": "https://github.com/reinitto/platformer2",
-    "about": "One weekends attempt at learning MelonJS platformer game.",
-    "technologies": [
-      "javascript",
-      "electron",
-      "node",
-      "melonJS",
-      "grunt",
-      "Tiled Map Editor"
-    ]
-  },
-  "project11": {
-    "name": "notUber",
-    "screenshot": "/screenshots/screenshot_notUber.png",
-    "link": "https://harsh-purple-stoat.glitch.me/",
-    "github": "https://github.com/reinitto/50_cent",
-    "about": "Uber-like frontend with integrated google maps,directions,places. Allows to look up the estimated price, time for the entered trip. Autocompletes search. Calculates a surcharge during more busy times(based on personal assumptions). Dark mode turns on after 5pm.",
-    "technologies": ["javascript", "express", "node"]
-  },
-  "project10": {
-    "name": "Quote machine",
-    "screenshot": "/screenshots/screenshot_Quotemachine.png",
-    "link": "https://reinitto-didactic-octo-waddle.glitch.me/",
-    "github": "https://github.com/reinitto/didactic-octo-waddle",
-    "about": "Generates quotes. Has ability to tweet them.",
-    "technologies": ["javascript", "express", "node"]
-  },
-  "project9": {
-    "name": "Quiz Builder",
-    "screenshot": "/screenshots/screenshot_quizBuilder.jpg",
-    "link": "https://rounded-shorthaired-crystal.glitch.me/",
-    "github": "https://github.com/reinitto/quiz_builder",
-    "about": "Quiz builder App. Allows user to create quizzes and share them with friends. Implements redux state management",
-    "technologies": [
-      "React",
-      "Redux",
-      "javascript",
-      "express",
-      "node",
-      "mongoose",
-      "mongoDB",
-      "rest",
-      "api",
-      "MVC"
-    ]
-  },
+
   "project8": {
     "name": "Contact keeper",
     "screenshot": "/screenshots/screenshot_Contactkeeper.png",
     "link": "https://peppered-sudden-circle.glitch.me/",
-    "github": "https://github.com/reinitto/contact_keeper",
+    "github": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673292/portfolio/screenshot_Contactkeeper_ijd1yk.png",
     "about": "Contact manager App. Includes Registration, Login, Authorized routes, adding/deleting contacts. Utilizess bcrypt for password hashing, jsonwebtoken for authorization purposes.",
     "technologies": [
       "React",
@@ -146,7 +103,7 @@
   },
   "project7": {
     "name": "IT Logger",
-    "screenshot": "/screenshots/screenshot_ITLogger.png",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673293/portfolio/screenshot_ITLogger_cq4drj.png",
     "link": "https://reinitto-it-logger.glitch.me/",
     "github": "https://github.com/reinitto/it-logger",
     "about": "Logs Tickets. RESTful ticketing system. Add/remove/mark tickets. Add/remove/create/delete/assign engineers.",
@@ -171,7 +128,7 @@
   },
   "project6": {
     "name": "Githuhb Profile Finder",
-    "screenshot": "/screenshots/screenshot_GithuhbProfileFinder.png",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673292/portfolio/screenshot_GithuhbProfileFinder_oqjlai.png",
     "link": "https://agitated-jang-fc6861.netlify.app/",
     "github": "https://github.com/reinitto/github_finder",
     "about": "App that searches for matching github usernnames",
@@ -185,9 +142,24 @@
       "netlify"
     ]
   },
+  "project12": {
+    "name": "Platformer level",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673295/portfolio/screenshot_Platformerlevel_gbplkn.png",
+    "link": "https://epic-jones-453e59.netlify.app/",
+    "github": "https://github.com/reinitto/platformer2",
+    "about": "One weekends attempt at learning MelonJS platformer game.",
+    "technologies": [
+      "javascript",
+      "electron",
+      "node",
+      "melonJS",
+      "grunt",
+      "Tiled Map Editor"
+    ]
+  },
   "project5": {
     "name": "Anonymous message board",
-    "screenshot": "/screenshots/screenshot_Anonymousmessageboard.png",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673292/portfolio/screenshot_Anonymousmessageboard_cohaeq.png",
     "link": "https://rough-snipe.glitch.me/",
     "github": "https://github.com/reinitto/anon-message",
     "about": "Anonymous message board with abilities to create boards, threads, add/delete comemnts to threads,report threads and comments, add replies to comments. Uses a RESTful API to communicate with mongoDB.",
@@ -211,9 +183,17 @@
       "chai"
     ]
   },
+  "project10": {
+    "name": "Quote machine",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673293/portfolio/screenshot_Quotemachine_rncnkm.jpg",
+    "link": "https://reinitto-didactic-octo-waddle.glitch.me/",
+    "github": "https://github.com/reinitto/didactic-octo-waddle",
+    "about": "Generates quotes. Has ability to tweet them.",
+    "technologies": ["javascript", "express", "node"]
+  },
   "project4": {
     "name": "Exercise tracker",
-    "screenshot": "/screenshots/screenshot_Exercisetracker.png",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673292/portfolio/screenshot_Exercisetracker_hbtnht.png",
     "link": "https://auspicious-sight.glitch.me/",
     "glitch": "https://edit/#!/auspicious-sight.glitch.me/",
     "about": "Another logging system with MongoDB. Has the ability to create users, add user exercises with date, duration and time. Check all assigned exercisese to user. Uses MVC design pattern.",
@@ -236,7 +216,7 @@
   },
   "project3": {
     "name": "Issue tracker",
-    "screenshot": "/screenshots/screenshot_Issuetracker.png",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673293/portfolio/screenshot_Issuetracker_ofgreh.png",
     "link": "https://righteous-otter.glitch.me/apitest/",
     "github": "https://github.com/reinitto/issue_tracker",
     "about": "Tracks added issues. Ability to add/delete/mark_complete issues under specified project name. Create new collection if project doesn't exist. Saves data in mongoDB",
@@ -260,7 +240,7 @@
     "name": "Metric/Imp Converter",
     "link": "https://early-baseball.glitch.me/",
     "glitch": "https://edit/#!/early-baseball.glitch.me/",
-    "screenshot": "/screenshots/screenshot_MetricImpConverter.png",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673292/portfolio/screenshot_MetricImpConverter_rzxwid.png",
     "about": "Simple node metric-imperial converter API with a front-end",
     "technologies": ["javascript", "css", "html", "node", "jquery"]
   }

@@ -40,11 +40,18 @@ export function About() {
   let [text, setText] = useState(sections["Developer"]);
   let [active, setActive] = useState("Developer");
   let onClick = (active, text) => {
+    let tD = document.querySelector(".text-display");
+    tD.style.display = "none";
+    tD.classList.remove("text-display");
     setActive(active);
     setText(text);
+    setTimeout(() => {
+      tD.classList.add("text-display");
+      tD.style.display = "block";
+    }, 10);
   };
 
-  const content = Object.keys(sections).map((key) => (
+  const buttons = Object.keys(sections).map((key) => (
     <Section
       key={key}
       title={key}
@@ -62,9 +69,10 @@ export function About() {
           </div>
         </div>
 
-        <div className="about">{content}</div>
-
-        <div className="text-display">{text}</div>
+        <div className="about">{buttons}</div>
+        <div className="text-container">
+          <div className="text-display">{text}</div>
+        </div>
         <div
           style={{
             display: "flex",
