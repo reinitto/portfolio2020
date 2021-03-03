@@ -81,7 +81,7 @@ export function About() {
             alignItems: "center",
           }}
         >
-          <ExternalButton link="/reinis_rozensteins_cv.pdf" text="CV" />
+          <ExternalButton link="/Reinis_Rozensteins_Re.pdf" text="Resume" />
         </div>
       </div>
     </Fragment>

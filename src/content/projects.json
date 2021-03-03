@@ -21,9 +21,17 @@
       "responsive design"
     ]
   },
-  "project12": {
+  "project13": {
+    "name": "Social Network",
+    "github": "https://github.com/reinitto/social_net",
+    "link": "https://social-networkz.herokuapp.com/",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1614798948/portfolio/screenshot_Social_net_vg3orw.png",
+    "about": "Social Media application. Allows users to register/login, make posts with images and text. Follow other users. Send friend requests. Chat with friends. Add comments to posts. Respond to comments. Like and share posts. See Newsfeed and timeline.",
+    "technologies": ["javascript", "express", "node","react","heroku", "MongoDB", "MaterialUI", "react hooks", "express.js","node.js","bcrypt", "mailjetAPI"]
+  },
+  "project16": {
     "name": "News Website",
-    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673293/portfolio/screenshot_notUber_p7lw2x.png",
+    "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1614799109/portfolio/News_website_euq2ou.png",
     "link": "https://news-app-billion-and-one.herokuapp.com/",
     "github": "https://github.com/reinitto/news_site",
     "about": "News website. Displays top recent news in a selected country. Has the ability to search news by keywords.",
@@ -195,7 +203,7 @@
     "name": "Exercise tracker",
     "screenshot": "https://res.cloudinary.com/sunshinephoto/image/upload/c_thumb,w_200,g_face/v1594673292/portfolio/screenshot_Exercisetracker_hbtnht.png",
     "link": "https://auspicious-sight.glitch.me/",
-    "glitch": "https://edit/#!/auspicious-sight.glitch.me/",
+    "glitch": "https://glitch.com/edit/#!/auspicious-sight",
     "about": "Another logging system with MongoDB. Has the ability to create users, add user exercises with date, duration and time. Check all assigned exercisese to user. Uses MVC design pattern.",
     "technologies": [
       "vanilla",
